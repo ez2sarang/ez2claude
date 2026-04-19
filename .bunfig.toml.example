@@ -1,0 +1,7 @@
+# ez2claude global bun config (~/.bunfig.toml)
+# Bun disables lifecycle scripts by default — already safe.
+# We add minimumReleaseAge as an extra layer.
+
+[install]
+# 3 days in seconds = 259200. Raise to 604800 for 7-day protection.
+minimumReleaseAge = 259200

@@ -1,0 +1,24 @@
+# Local secrets. NEVER commit.
+.env
+.env.local
+*.key
+*.pem
+id_rsa
+id_ed25519
+
+# Personal / local state (nothing sensitive, just noise)
+.DS_Store
+*.log
+*.swp
+*.tmp
+.cache/
+node_modules/
+
+# The real settings.json is installed into ~/.claude/ by install.sh.
+# We only ship settings.json.example in git.
+settings.json
+
+# IDE / editor
+.idea/
+.vscode/
+*.iml

@@ -1,0 +1,17 @@
+# ez2claude global npm config (~/.npmrc)
+#
+# min-release-age: block packages younger than N days.
+# Default here is 3 days. Raise to 7 for stricter defense.
+# Background: brand-new releases are the vector for most supply-chain
+# attacks (postinstall RAT, credential stealers). Waiting 3-7 days
+# gives the community time to flag malicious publishes.
+min-release-age=3
+
+# ignore-scripts: disable postinstall/preinstall scripts by default.
+# This neutralizes the primary attack vector (e.g., Axios 1.14.1 RAT).
+# Use `npm install --ignore-scripts` or `npm ci --ignore-scripts`.
+ignore-scripts=true
+
+# save-exact: pin exact versions (no ^/~ ranges).
+# This prevents silent upgrades to a malicious minor/patch release.
+save-exact=true
